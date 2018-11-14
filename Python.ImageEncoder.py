@@ -109,7 +109,7 @@ def readEncodedImg(inputImgName):
 
 def gui():
     print("Clean, Encode, Clean and Encode (.bmp only), Decode or Quit? " +
-          "(C, e,a, d, q)" )
+          "(C, e, a, d, q)" )
     choice = input(">")[0].lower()
 
     # Quit application 
@@ -118,7 +118,7 @@ def gui():
 
     # All functions require the path to the input image 
     print("Type the name of the input image (include the file extension " +
-          "and path if required)""")
+          "and path if required)")
     inputImgName = input(">")
 
     # Some functions require additional parameters 
