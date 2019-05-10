@@ -113,7 +113,7 @@ def cli():
 
     # Quit application
     if choice == "q":
-        return True 
+        return True
 
     # All functions require the path to the input image
     print("Type the name of the input image (include the file extension " +
@@ -122,7 +122,7 @@ def cli():
 
     # Some functions require additional parameters
     if choice != "d":
-        print("Type the name of the output image (include the file extension " +
+        print("Type the name of the output image (include the file extension "+
               "and path if required)")
         outputImgName = input(">")
     if choice == "e" or choice == "a":
@@ -146,6 +146,6 @@ def cli():
         writeCleanImg(inputImgName, outputImgName)
 
 # Run the cli while the user has not finished
-finished = False 
+finished = False
 while not finished:
     finished = cli()

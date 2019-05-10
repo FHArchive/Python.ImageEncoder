@@ -66,16 +66,25 @@ version.
 
 
 ## Define application constants
-The default values for HEADER_SIZE, FOOTER_SIZE and MAX_SECRET_LEN are 1024. This can be changed with minimal impact on the program
+The default values for HEADER_SIZE, FOOTER_SIZE and MAX_SECRET_LEN are 1024. 
+This can be changed with minimal impact on the program
 
 - HEADER_SIZE
-The minimum value that I would recommend setting this to would be 256. After a quick look on Wikipedia, it looks like anywhere between 16 and 196 bytes are required for the header. Setting it at 256 or higher seems safe.
+The minimum value that I would recommend setting this to would be 256. After 
+a quick look on Wikipedia, it looks like anywhere between 16 and 196 bytes are 
+required for the header. Setting it at 256 or higher seems safe.
 
 - FOOTER_SIZE
-It doesn't look like a bitmap has a footer. This was included for .jpg images. Play around with it if you would like but there is certainly no harm in leaving it at the default value 
+It doesn't look like a bitmap has a footer. This was included for .jpg images. 
+Play around with it if you would like but there is certainly no harm in 
+leaving it at the default value 
 
 - MAX_SECRET_LEN
-This was included to stop python crashing. In a future version I will terminate the decoder when it encounters the first null character. This would likely remove the need for this. Or would certainly make it less essential. Using larger values will decrease the speed of the program but shouldn't have an adverse effect
+This was included to stop python crashing. In a future version I will 
+terminate the decoder when it encounters the first null character. This would 
+likely remove the need for this. Or would certainly make it less essential. 
+Using larger values will decrease the speed of the program but shouldn't have 
+an adverse effect
 
 I've done an MD5 hash of "CLEAN" and appended it to the filename to reduce
 the chance of overwriting an important file
@@ -123,17 +132,21 @@ cli():
 - Entering 'd' will decode an image (specified by its path)
 - Entering 'q' will quit the program 
 
-"Type the name of the input image (include the file extension and path if required)"
+"Type the name of the input image (include the file extension and path if 
+required)"
 
 - Enter the path to an input image 
 
-"Type the name of the output image (include the file extension and path if required)"
+"Type the name of the output image (include the file extension and path if 
+required)"
 
-- If the user selected Clean, Encode, or Clean and Encode. Enter the path of an output image 
+- If the user selected Clean, Encode, or Clean and Encode. Enter the path of 
+an output image 
    
 "Type the secret message (max MAX_SECRET_LEN characters)"
 
-- If the user selected Encode, or Clean and Encode. Enter a message for the program to encode in the image  
+- If the user selected Encode, or Clean and Encode. Enter a message for the 
+program to encode in the image  
 
 
 
